@@ -1,3 +1,9 @@
 body{
     background-color: #87cefa;
 }
+
+/* git add part 4*/
+.thumbnail{
+	width: 100%;
+	height: 200px;
+}
