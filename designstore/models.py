@@ -18,8 +18,9 @@ class Product(models.Model):
     name = models.CharField(max_length=255, null=True)
     price = models.FloatField()
     size = models.IntegerField(blank=False)
-    type_of_design = (('Icon', 'Icon'),('Logo', 'Logo'), ('Poster','Poster'),) 
-    #image
+    type_of_design_icon_logo_poster = models.CharField(max_length=255, null=True)
+    image = models.ImageField(null=True, blank=True)
+    
     
     def __str__(self):
         return self.name 

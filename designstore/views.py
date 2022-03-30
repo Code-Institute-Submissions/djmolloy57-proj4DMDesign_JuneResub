@@ -1,9 +1,11 @@
 from django.shortcuts import render
 from . import forms
+from .models import *
 
 # Create your views here.
 def designstore(request):
-    context = {}
+    products = Product.objects.all()
+    context = { 'products':products }
     return render(request, 'designstore/designstore.html', context)
 
 def cart(request):
