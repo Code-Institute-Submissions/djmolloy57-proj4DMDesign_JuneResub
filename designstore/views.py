@@ -13,3 +13,8 @@ def cart(request):
 def viewitem(request):
     context = {}
     return render(request, 'designstore/viewitem.html', context)
+
+def form_name_view(request):
+    context = {}
+    return render(request,'designstore/form_page.html', context)
+    
