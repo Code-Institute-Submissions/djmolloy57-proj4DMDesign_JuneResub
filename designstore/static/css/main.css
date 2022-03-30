@@ -17,3 +17,16 @@ body{
   background-color: grey;
   margin-bottom: 20px;
 }
+
+#login-btn{
+    margin-top: 20px;
+    margin-left: 10px;
+}
+
+#cart-icon{
+	width:25px;
+	display: inline-block;
+	margin-left: 15px;
+}
+
+
