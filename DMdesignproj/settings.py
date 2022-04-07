@@ -29,7 +29,7 @@ SECRET_KEY = 'django-insecure-4jnrj*2jc+%9a3@=jt3+o%oa5mrv1)&w#sygv9&f%j!i&nb+!1
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['dmoll-django-dmdesign-app.herokuapp.com', 'localhost']
 
 
 # Application definition

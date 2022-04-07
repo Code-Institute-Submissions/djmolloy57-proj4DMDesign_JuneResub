@@ -1,0 +1,1 @@
+web: gunicorn DMdesignproj.wsgi:application
