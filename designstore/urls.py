@@ -11,5 +11,7 @@ urlpatterns = [
     path('formpage/', views.form_name_view, name="form_name"),
     path('viewlogo/', views.viewlogo, name="viewlogo"),
 	path('viewicon/', views.viewicon, name="viewicon"),
+    #path('login/', views.form_name_view, name="form_name"),
+    path('login/', views.sitelogin, name="login"),
 	
 ]

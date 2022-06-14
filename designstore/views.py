@@ -39,3 +39,9 @@ def viewicon(request):
     context = {}
     return render(request, 'designstore/viewicon.html', context)
 
+def sitelogin(request):
+    context = {}
+    #return render(request, '../account.html', context)
+    return render(request, 'registration/login.html', context)
+    
+
