@@ -9,5 +9,7 @@ urlpatterns = [
     path('viewitem/', views.viewitem, name="viewitem"),
     #path('form_page/', views.cart, name="formpage"),
     path('formpage/', views.form_name_view, name="form_name"),
+    path('viewlogo/', views.viewlogo, name="viewlogo"),
+	path('viewicon/', views.viewicon, name="viewicon"),
 	
 ]

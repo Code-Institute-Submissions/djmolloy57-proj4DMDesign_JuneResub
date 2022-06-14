@@ -30,3 +30,12 @@ def form_name_view(request):
             print("TEXT: "+form.cleaned_data['text'])
 
     return render(request,'designstore/form_page.html', {'form': form})
+
+def viewlogo(request):
+    context = {}
+    return render(request, 'designstore/viewlogo.html', context)
+
+def viewicon(request):
+    context = {}
+    return render(request, 'designstore/viewicon.html', context)
+
