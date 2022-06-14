@@ -25,11 +25,13 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = os.environ.get('SECRET_KEY', '')
+#SECRET_KEY = 'o+5$gjd&-^8$_u%#q1wgn$z8_e4a*z--nyzt_8sp!%(k2%0rfw'
 
 
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = 'DEVELOPMENT' in os.environ
+#DEBUG = True
 
 ALLOWED_HOSTS = ['dmoll-django-dmdesign-app.herokuapp.com', 'localhost']
 
