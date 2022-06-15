@@ -104,9 +104,9 @@ SITE_ID = 1
 #    }
 #}
 
-#DATABASES = {
-#    'default': dj_database_url.parse('postgres://wzwnmqfwghqrum:4554bfe8817a4b54acb2033f4b1ef0b9dcc7cb818b3862b72c15973346dd0b50@ec2-3-217-251-77.compute-1.amazonaws.com:5432/d92svjs0bvdn04')
-#}
+DATABASES = {
+    'default': dj_database_url.parse('postgres://wzwnmqfwghqrum:4554bfe8817a4b54acb2033f4b1ef0b9dcc7cb818b3862b72c15973346dd0b50@ec2-3-217-251-77.compute-1.amazonaws.com:5432/d92svjs0bvdn04')
+}
 
 
 # Password validation
