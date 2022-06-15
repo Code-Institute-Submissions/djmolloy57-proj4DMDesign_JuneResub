@@ -1,6 +1,14 @@
 {% extends 'designstore/main.html' %}
 {% block title %}Login{% endblock %}
-
+{% load crispy_forms_tags %}
 {% block content %}
-    <h3>Login</h3>
+<form method="post">
+  {% csrf_token %}{{form|crispy}}
+  <div id="div_id_username" class="mb-3"> <label for="id_username" class="form-label requiredField">
+    Username<span class="asteriskField">*</span> </label> <input type="text" name="username" autofocus autocapitalize="none" autocomplete="username" maxlength="150" class="textinput textInput form-control" required id="id_username"> </div> <div id="div_id_password" class="mb-3"> <label for="id_password" class="form-label requiredField">
+    Password<span class="asteriskField">*</span> </label> <input type="password" name="password" autocomplete="current-password" class="textinput textInput form-control" required id="id_password"> </div>
+
+  <p>Don't have an account? Create one <a href="/sign_up">Here</a>!</p>
+  <button type="submit" class="btn btn-success">Login</button>
+</form>
 {% endblock %}

@@ -29,6 +29,7 @@ SECRET_KEY = os.environ.get('SECRET_KEY', '')
 
 
 
+
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = 'DEVELOPMENT' in os.environ
 #DEBUG = True
@@ -46,8 +47,20 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
 
-    'designstore'
+    'django.contrib.sites',
+    'allauth',
+    'allauth.account',
+    'allauth.socialaccount',
+
+    'designstore',
+    'crispy_forms',
+    'crispy_bootstrap5'
+
 ]
+
+CRISPY_ALLOWED_TEMPLATE_PACKS = "bootstrap5"
+
+CRISPY_TEMPLATE_PACK = "bootstrap5"
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -79,6 +92,7 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'DMdesignproj.wsgi.application'
 
+SITE_ID = 1
 
 # Database
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
@@ -90,9 +104,9 @@ WSGI_APPLICATION = 'DMdesignproj.wsgi.application'
 #    }
 #}
 
-DATABASES = {
-    'default': dj_database_url.parse('postgres://wzwnmqfwghqrum:4554bfe8817a4b54acb2033f4b1ef0b9dcc7cb818b3862b72c15973346dd0b50@ec2-3-217-251-77.compute-1.amazonaws.com:5432/d92svjs0bvdn04')
-}
+#DATABASES = {
+#    'default': dj_database_url.parse('postgres://wzwnmqfwghqrum:4554bfe8817a4b54acb2033f4b1ef0b9dcc7cb818b3862b72c15973346dd0b50@ec2-3-217-251-77.compute-1.amazonaws.com:5432/d92svjs0bvdn04')
+#}
 
 
 # Password validation
@@ -143,3 +157,6 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'static/images')
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+LOGIN_REDIRECT_URL = '/designstore'
+LOGOUT_REDIRECT_URL = '/login'

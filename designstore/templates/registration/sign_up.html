@@ -1,6 +1,10 @@
 {% extends 'designstore/main.html' %}
 {% block title %}Sign Up{% endblock %}
-
+{% load crispy_forms_tags %}
 {% block content %}
-    <h3>Sign Up</h3>
+<form method="post">
+  {% csrf_token %}{{form|crispy}}
+  <p>Don't have an account? Login <a href="/login">Here</a>!</p>
+  <button type="submit" class="btn btn-success">Register</button>
+</form>
 {% endblock %}
